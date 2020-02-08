@@ -1,0 +1,10 @@
+.button {
+    background-color: #eb7652;
+    border-radius: 5px;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

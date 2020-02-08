@@ -15,3 +15,37 @@
 
 // Challenge
 // Make the countdown live...
+
+const body = document.querySelector('body');
+body.style.height = '100vh';
+body.style.width = '100vw';
+body.style.margin = 0;
+body.style.padding = 0;
+
+let time = randomNumber(1, 6);
+document.getElementById('time').innerText = time;
+
+
+let countdown = setInterval(() => {
+    time --;
+    document.getElementById('time').innerText = time;
+    if (time == 0) {
+        youLose();
+    }
+}, 1000);
+console.log(time);
+// document.getElementById('time').innerText = time;
+
+body.addEventListener('click', function () {
+    document.getElementById('result').innerText = 'You Win!'
+    clearInterval(countdown);
+})
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function youLose () {
+    document.getElementById('result').innerText = 'You Lose!'
+    clearInterval(countdown);
+}

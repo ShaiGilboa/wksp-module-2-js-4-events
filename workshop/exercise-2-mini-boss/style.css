@@ -1,0 +1,80 @@
+body {
+    background-color: #facad7;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.three-sections {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 20vh;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+ul {
+    padding: 0 40px;
+}
+
+li {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#resetStopwatch {
+    display: none;
+}
+
+.timerInput {
+    width: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.timerValues > p {
+    margin: 5px;
+}
+
+#inputTimerValues {
+    display: flex;
+    flex-direction: row ;
+    margin:0 auto;
+    padding:0;
+}
+
+.timerButton {
+    margin: 0 auto;
+    width: 150px;
+}
+
+.box {
+    background-color: #9ee4da;
+    border-radius: 5px;
+    width: 200px;
+    /* padding: 1rem; */
+}
+
+.button {
+    background-color: #52d0a1;
+    margin: 5px auto;
+    width: 150px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    padding: 2px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.time-font {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.time-title {
+    font-size: x-large;
+    margin-bottom: 0;
+}

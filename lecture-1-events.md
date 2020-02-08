@@ -26,11 +26,11 @@ Open the door, when someone is there.
 
 #### User Interface Events
 
-- `load`
-- `unload`
-- `error`
-- `resize`
-- `scroll`
+- `load` - when this 'node' is loaded
+- `unload` - when this 'node' is removed
+- `error` - when there is an error
+- `resize` - when the screen is being resized
+- `scroll` - when scrolling 
 
 ---
 
@@ -38,8 +38,8 @@ Open the door, when someone is there.
 
 These events fire when the HTML elements you can interact with gain/ lose focus.
 
-- `focus`
-- `blur`
+- `focus` - gainning focus
+- `blur` - gainning blur (for example, let the user know that the email wrong only after they "click away" from the input box)
 - `focusin` (_new; not supported by Firefox_)
 - `focusout` (_new; same as blur; not supported by Firefox_)
 
@@ -49,44 +49,44 @@ These events fire when the HTML elements you can interact with gain/ lose focus.
 
 - `click`
 - `dblclick`
-- `mousedown`
-- `mouseup`
-- `mouseover`
-- `mouseout`
-- `mousemove`
+- `mousedown` - holding it down
+- `mouseup` - 
+- `mouseover` - hover in - entering an element
+- `mouseout` - hover away - leavs an element
+- `mousemove` - anytime a mouse moves anywhere (when ending a screen saver)
 
 ---
 
 ##### Keyboard Events
 
 - `input`
-- `keydown`
-- `keypress`
-- `keyup`
+- `keydown` - multiple events as long as the key is down
+- `keypress` - single
+- `keyup` - when the key is "unpressed"
 
 ---
 
 ### Form Events
 
-- `submit`
-- `change`
-- `input`
+- `submit` - the 'submit' input in a form element will triger the submit event
+- `change` - checking 'live'
+- `input` - a listener like change, only just when an input happens
 
 ---
 
 ### HTML5 Events
 
-- `DOMContentLoaded`
-- `hashchange`
-- `beforeunload`
+- `DOMContentLoaded` - when the contant of this element is loaded
+- `hashchange` - listening for the change within a page (when you have an href="#LocationOnPage")
+- `beforeunload` - when someone wants to leave your website.
 
 ---
 
 ### CSS Events
 
-- `transitionend`
-- `animationstart`
-- `animationend`
+- `transitionend` - when a CSS transition ends
+- `animationstart` - when an animation starts
+- `animationend` - when an animation ends
 
 ---
 
@@ -94,13 +94,22 @@ These events fire when the HTML elements you can interact with gain/ lose focus.
 
 All DOM nodes have methods we can use to _notify_ us of an event.
 
-- [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) - 2 required arguments: (WhatImListeningFor, WhatToDoWhenCalled)
 - [`removeEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 
 ```js
 // Example
+function handleOuch = function (event) {
+    event.prevetDefault();
+    console.log("ouch!");
+}
 
+const button = document.createElement('button');
+button.id = "btn";
+button.addEventListener('click', handleOuch);
+button.removeEventListener('click', handleOuch);
 ```
+very common to call our event handler function "handleAction"
 
 ---
 
@@ -149,7 +158,8 @@ Handlers registered on nodes with children will also receive events that happen 
     </ul>
 </div>
 ```
-
+by clicking on a child, I'm actually also clicking on the paret. 
+when I click on the img, I'm also clicking on the `<li>`
 ---
 
 ### 3 Phases of Event Propagation
@@ -184,6 +194,13 @@ button.addEventListener("mousedown", event => {
     if (event.button == 2) event.stopPropagation();
 });
 ```
+
+the node that has the vent listener will trigger first.
+th function triggers when you hit the target.
+event.button == 2 (right button)
+event.button default is left
+event.target IS A READ ONLY
+
 ---
 
 ## Events and the Event Loop

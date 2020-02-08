@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css" />
+    <style>
+    </style>
+</head>
+<body>
+    <ul class="three-sections">
+        <li class="current-time box">
+            <p class="time-title">Current time</p>
+            <h2><span id="currentTime" class="time-font"></span></h2>
+        </li>
+        <li class="timer box">
+            <p class="time-title">Timer</p>
+            <h2><span id="timer" class="time-font">00:00:00</span></h2>
+            <ul id="inputTimerValues">
+                <li class="timerValues">
+                    <input  type="number" id="timerHours" class="timerInput"  min="0" ><p>Hours</p>
+                </li>
+                <li class="timerValues">
+                    <input  type="number" id="timerMinutes" class="timerInput" max="59" min="0"><p>Minutes</p>
+                </li>
+                <li class="timerValues">
+                    <input  type="number" id="timerSeconds" class="timerInput" max="59" min="0"><p>Seconds</p>
+                </li>
+            </ul>
+            <button id="setTimer" class="timerButton button">Set timer</button>
+            <button id="startTimer" class="timerButton button">Start timer</button>
+        </li>
+        <li class="stop-watch box">
+            <p class="time-title">Stop watch</p>
+            <h2><span id="stopwatchShow" class="time-font">00:00:00</span></h2>
+            <span id="stopwatchBtns">
+                <button id="stopwatchBtn" class="button">Start Stopwatch</button>
+                <button id="resetStopwatch" class="button">Reset Stopwatch</button>
+            </span>
+        </li class="stop-watch">
+    </ul>
+    <audio id="myAudio">
+        <source src="../../assets/timer.mp3" type="audio/mpeg">
+    </audio>
+    <script src="app.js"></script>
+</body>
+
+</html>
