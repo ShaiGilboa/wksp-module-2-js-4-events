@@ -25,12 +25,12 @@ body {
     text-align: center;
 }
 
-#instructions {
+.instructions {
     display: block;
     font-size: medium;
     font-family: 'Cousine', monospace;
 }
-#startBtn {
+.startBtn {
     position: absolute;
     left: calc(50% - 25px);
     top: 50px

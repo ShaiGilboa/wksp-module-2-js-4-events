@@ -1,0 +1,167 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+/* .postionObject {
+
+} */
+
+.background {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: fill;
+    z-index: -1;
+}
+
+.player {
+    position: absolute;
+    height: 100px;
+    /* widows: 130px; */
+    bottom: 5%;
+    z-index: 2;
+}
+
+.p1 {
+    left: 10%;
+    height: 50px;
+}
+
+.p2 {
+    right: 10%;
+}
+
+.button {
+    border: 3px solid #8fa2aa;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #1c3144;
+    z-index: 0;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    color: wheat;
+    visibility: hidden;
+    z-index: 2;
+
+}
+
+.startBtn {
+    visibility: visible;
+    top: 30%;
+}
+
+.instructionsRestartBtn {
+    visibility: visible;
+    top: 50%;    
+}
+
+.instructions {
+    position: absolute;
+    visibility: hidden;
+    background-color: #1c3144;
+    width: 40%;
+    border: 3px solid #8fa2aa;
+    text-align: center;
+    padding: 25px 15px;
+    color: wheat;
+    font-family: 'Raleway', sans-serif;
+    top: 30%;
+    z-index: 2;
+}
+
+.x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    font-size: .5rem;
+}
+
+.prize {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.p1Prize1 {
+    left: 0;
+}
+
+.p1Prize2 {
+    left: 41px;
+}
+
+.p1Prize3 {
+    left: 82px;
+}
+
+.p2Prize1 {
+    right: 0;
+}
+
+.p2Prize2 {
+    right: 41px;
+}
+
+.p2Prize3 {
+    right: 82px;
+}
+
+.prize11 {
+    left: 0;
+}
+
+.win {
+    position: absolute;
+    bottom: 5%;
+    z-index: 2;
+}
+
+.p1Win {
+    visibility: hidden;
+    height: 100px;
+}
+
+.p2Win {
+    visibility: hidden;
+    height: 140px;
+}
+
+.prizeToWin {
+    bottom: 5%;
+}
+
+.winMessage {
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 30%;
+    color: white;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.signal {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+
+}
